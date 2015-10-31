@@ -1,3 +1,39 @@
+#The RSS Feeder
+
+To Launch:
+------------
+	1. Load index.html in a browser
+
+Description:
+------------
+
+	The web page provides an option to view 4 RSS feeds
+		* The first feed is automatically loaded when the page loads.
+	
+	Clicking the Menu Icon in the top left makes visible a hidden menu that shows the 4 feeds. Clicking it a 2nd time hides the menu.
+	
+	Selecting a feed from the hidden menu updates the page with the new feed information.
+
+Test Suites:
+-------------
+	There are Jasmin 4 tests suites with 8 tests designed to ensure certain features are tested and passes. The tests as as follows:
+	Suite 1: "RSS Feed":
+		Test 1: Ensures allFeeds variable has been defined and that it is not empty.
+		Test 2: Loops through each feed in the allFeeds object and ensures it has a URL defined and that the URL is not empty.
+		Test 3: Loops through each feed in the allFeeds object and ensures it has a name defined and that the name is not empty.
+	
+	Suite 2: "The menu":
+		Test 4: Ensures the menu element is hidden by default. 
+		Test 5: Ensures the menu changes visibility when the menu icon is clicked.
+		Test 6: Ensures the menu hides when the menu icon is clicked for a second time.
+	
+	Suite 3: "Initial Entries":
+		Test 7: Ensures when the loadFeed function is called and completes its work, there is at least a single .entry element within the .feed container. This test uses beforeEach and asynchronous done() function.
+	
+	Suite 4: "New Feed Slection":
+		Test 8: Ensures when a new feed is loaded by the loadFeed function that the content actually changes. his test uses beforeEach and asynchronous done() function.
+
+
 # Project Overview
 
 In this project you are given a web-based application that reads RSS feeds. The original developer of this application clearly saw the value in testing, they've already included [Jasmine](http://jasmine.github.io/) and even started writing their first test suite! Unfortunately, they decided to move on to start their own company and we're now left with an application with an incomplete test suite. That's where you come in.
@@ -32,6 +68,7 @@ You will learn how to use Jasmine to write a number of tests against a pre-exist
 7. Write a test that loops through each feed in the allFeeds object and ensures it has a URL defined and that the URL is not empty.
 8. Write a test that loops through each feed in the allFeeds object and ensures it has a name defined and that the name is not empty.
 9. Write a new test suite named "The menu".
+
 10. Write a test that ensures the menu element is hidden by default. You'll have to analyze the HTML and the CSS to determine how we're performing the hiding/showing of the menu element.
 11. Write a test that ensures the menu changes visibility when the menu icon is clicked. This test should have two expectations: does the menu display when clicked and does it hide when clicked again.
 12. Write a test that ensures when the loadFeed function is called and completes its work, there is at least a single .entry element within the .feed container. Remember, loadFeed() is asynchronous so this test wil require the use of Jasmine's beforeEach and asynchronous done() function.
